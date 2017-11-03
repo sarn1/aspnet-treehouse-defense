@@ -5,10 +5,10 @@ C# Objects
 
 https://teamtreehouse.com/library/c-objects
  
+- convention is to name classes with upper case first letter, so you can name the object by their type (class)
  ```csharp
  Tower tower = new Tower();  
  ```
-- convention is to name classes with upper case first letter, so you can name the object by their type (class)
 - object is an instance of a class
 - fields are private by default
 - constructor methods are name after the class its in (Map.cs)
@@ -49,9 +49,9 @@ public int DistanceTo(Point point)
 - you can use "is" to see if an object is of a specific type
 ```csharp
 Point x = new MapLocation(4,2);
-Console.WriteLine(x is MapLocation);	//return
+Console.WriteLine(x is MapLocation);	//return true
 ```
-- Interesting use of try/catch and throwing exceptions
+- Interesting use of try/catch and throwing exceptions...
 ```csharp
 try {
     if (value < 0 || value > 20)
