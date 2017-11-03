@@ -1,0 +1,6 @@
+﻿namespace TreehouseDefense
+{
+    class Invader
+    {
+    }
+}
