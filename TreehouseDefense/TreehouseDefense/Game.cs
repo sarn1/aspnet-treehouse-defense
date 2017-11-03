@@ -39,9 +39,17 @@ namespace TreehouseDefense
                 //maplocation throws exception in the constructor (MapLocation.cs)
                 MapLocation mapLocation = new MapLocation(1000, 1000, map);
             } 
-            catch(Exception)
+            catch(OutOfBoundsException o_ex)
             {
-                Console.WriteLine("Not on the map!"); 
+                Console.WriteLine(o_ex.Message);
+            }
+            catch (TreehouseDefenseException)
+            {
+                Console.WriteLine("Unhandled TreehouseDefenseException");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
 
 

@@ -7,7 +7,7 @@
             //throw exception if not on map
             if (!map.OnMap(this))
             {
-                throw new System.Exception();
+                throw new OutOfBoundsException("Out of bounds!");
             }
         }
     }

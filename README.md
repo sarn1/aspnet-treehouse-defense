@@ -56,9 +56,12 @@ Console.WriteLine(x is MapLocation);	//return true
 try {
     if (value < 0 || value > 20)
     {
-        throw new System.Exception();
+        throw new System.Exception("Invalid");
     }
-} catch (Exception) {
-    Console.WriteLine("Value is out of bounds!");
+} catch (Exception ex) {
+    Console.WriteLine(ex.Message);
 }
 ```
+- no base since this is the default constructor and it implies that the base constructor is called (Exceptions.cs)
+- the order of the catches matter, the more specific ones need to be at the top, also child exceptions need to be before the generic System.Exception
+
