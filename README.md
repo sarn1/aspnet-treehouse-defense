@@ -5,17 +5,17 @@ C# Objects
 
 https://teamtreehouse.com/library/c-objects
  
-- convention is to name classes with upper case first letter, so you can name the object by their type (class)
+- Convention is to name classes with upper case first letter, so you can name the object by their type (class).
  ```csharp
  Tower tower = new Tower();  
  ```
-- object is an instance of a class
-- fields are private by default
-- constructor methods are name after the class its in (Map.cs)
-- public instance variables are cap (Map.cs)
-- readonly ensures that a field doesn't get changed after the object is constructed (Map.cs)
-- constructor method can't return anything
-- overloading example
+- Object is an instance of a class.
+- Fields are private by default.
+- Constructor methods are name after the class its in (Map.cs).
+- Public instance variables are cap (Map.cs).
+- `readonly` ensures that a field doesn't get changed after the object is constructed (Map.cs).
+- Constructor method can't return anything.
+- Overloading example...
 ```csharp
 public int DistanceTo(int x, int y)
 {
@@ -42,11 +42,11 @@ public int DistanceTo(Point point)
     return (int)System.Math.Sqrt(xDiffSq + yDiffSq);
 }
 ```
-- MapLocation is a subclass and inherits from Point (MapLocation.cs)
+- MapLocation is a subclass and inherits from Point (MapLocation.cs).
 - The requirements of Point (the 2 parameter constructor) must be satisfied since it first calls the point class.
-- Base class = Parent Class / Super Class
-- Sub class = Child Class / Derived Class
-- you can use "is" to see if an object is of a specific type
+- Base class = Parent Class / Super Class.
+- Sub class = Child Class / Derived Class.
+- You can use `is` to see if an object is of a specific type.
 ```csharp
 Point x = new MapLocation(4,2);
 Console.WriteLine(x is MapLocation);	//return true
@@ -62,6 +62,6 @@ try {
     Console.WriteLine(ex.Message);
 }
 ```
-- no base since this is the default constructor and it implies that the base constructor is called (Exceptions.cs)
-- the order of the catches matter, the more specific ones need to be at the top, also child exceptions need to be before the generic System.Exception
+- No base since this is the default constructor and it implies that the base constructor is called (Exceptions.cs).
+- The order of the catches matter, the more specific ones need to be at the top, also child exceptions need to be before the generic `System.Exception`.
 
