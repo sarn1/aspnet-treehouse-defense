@@ -42,4 +42,23 @@ public int DistanceTo(Point point)
     return (int)System.Math.Sqrt(xDiffSq + yDiffSq);
 }
 ```
-- 
+- MapLocation is a subclass and inherits from Point (MapLocation.cs)
+- The requirements of Point (the 2 parameter constructor) must be satisfied since it first calls the point class.
+- Base class = Parent Class / Super Class
+- Sub class = Child Class / Derived Class
+- you can use "is" to see if an object is of a specific type
+```csharp
+Point x = new MapLocation(4,2);
+Console.WriteLine(x is MapLocation);	//return
+```
+- Interesting use of try/catch and throwing exceptions
+```csharp
+try {
+    if (value < 0 || value > 20)
+    {
+        throw new System.Exception();
+    }
+} catch (Exception) {
+    Console.WriteLine("Value is out of bounds!");
+}
+```

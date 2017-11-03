@@ -20,10 +20,33 @@ namespace TreehouseDefense
             Console.WriteLine(map.Width);
             Console.WriteLine(map.OnMap(point));    //not in bound
             Console.WriteLine(map.OnMap(point2));   //in bound
-
-            //overloading example
+            
+            Console.WriteLine("---------Overload----------");
             Console.WriteLine(point.DistanceTo(2, 3));
             Console.WriteLine(point.DistanceTo(point2));
+
+
+            Console.WriteLine("---------Inheritance----------");
+            MapLocation mappoint = new MapLocation(4, 2, map);
+            Console.WriteLine("MapLocation using Point class's distance to: " + mappoint.DistanceTo(point2) );
+            Console.WriteLine(mappoint is MapLocation);
+            Console.WriteLine(mappoint is Point);
+
+            Console.WriteLine("----------Exception---------");
+            //exception
+            try
+            {
+                //maplocation throws exception in the constructor (MapLocation.cs)
+                MapLocation mapLocation = new MapLocation(1000, 1000, map);
+            } 
+            catch(Exception)
+            {
+                Console.WriteLine("Not on the map!"); 
+            }
+
+
+
+
 
             Console.ReadLine();
         }
