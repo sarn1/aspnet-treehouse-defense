@@ -64,4 +64,39 @@ try {
 ```
 - No base since this is the default constructor and it implies that the base constructor is called (Exceptions.cs).
 - The order of the catches matter, the more specific ones need to be at the top, also child exceptions need to be before the generic `System.Exception`.
+```csharp
+//the same
+string[] a = new string[]{"a","b","c"};
+string[] a = new []{"a","b","c"};
+string[] a = {"a","b","c"};
+```
+- Instead of using traditional getters & setters, you can use "properties".
+```csharp
 
+public MapLocation GetLocation ()
+{
+    return _location;
+}
+
+public void SetLocation(MapLocation value)
+{
+    _location = value;
+}
+
+// you can do this instead
+
+public MapLocation Location 
+{
+	get
+	{
+		return _location;
+	}
+	set
+	{
+		_location = value;
+	}
+}
+
+// x.Location = 5 will call the properties
+
+```
