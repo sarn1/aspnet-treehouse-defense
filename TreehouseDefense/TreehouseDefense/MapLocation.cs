@@ -10,5 +10,10 @@
                 throw new OutOfBoundsException("Out of bounds!");
             }
         }
+
+        public bool InRangeOf(MapLocation location, int range)
+        {
+            return DistanceTo(location) <= range;
+        }
     }
 }

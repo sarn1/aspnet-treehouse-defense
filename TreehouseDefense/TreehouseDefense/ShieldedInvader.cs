@@ -12,10 +12,7 @@ namespace TreehouseDefense
 
         public ShieldedInvader (Path path) : base(path)
         {
-            if (_random.NextDouble() < .5)
-            {
-                base.DecreaseHealth(factor);
-            }
+         
         }
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Level.cs" />
     <Compile Include="ShieldedInvader.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Game.cs" />

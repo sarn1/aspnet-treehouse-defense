@@ -99,4 +99,52 @@ public MapLocation Location
 
 // x.Location = 5 will call the properties
 
+// auto-property (is a syntatic sugar): public MapLocation Location { get; private set; }
+
+
+
+```
+- Properties intentional looks like fields because they should be used like fields.  They should be used for simple things like setting and returning things.  Quick calculations that are supposed to be fast.
+- More syntatic sugar:
+```sql
+public MapLocation Location {
+    get
+    {
+        return _path.GetLocationAt(_pathStep);
+    }
+}
+
+/*
+ * The above can also be written as :
+ * public MapLocation Location => _path.GetLocationAt(_pathStep);
+ */
+		 
+public void Move()
+{
+	_pathStep += 1;
+}
+
+/*
+ * The above can be written as :
+ * public void Move => _pathStep += 1;
+ */
+
+ public void Scale(double factor)
+{
+    SideLength *= factor;
+}
+/*
+ * The above can be written as :
+ * public void Scale(double factor) => SideLength *= factor;
+ */
+
+```
+- Setting a StartAt property to 10 without defining a constructor
+```sql
+public int StartAt { get; private set; } = 10;
+```
+- For-loop using a variable declared outside the loop so it can be used outside the loop's scope
+```sql
+int i = 0;
+for (; i < invaders.Length; i++){}
 ```
