@@ -180,5 +180,11 @@ penguin.Move();
 - _ prefixed variables mean `private`.
 - All classes inherit from System.Object, then you override these using polymorphism.
 - Learn about `GetHashCode()` and `Finalize()`.
+- By putting abstract to a class definition, you no longer can create (instantiate) a concrete object of that class, but it onnly provides an abstract definition of what it means to be an invader.  See Invader.cs, BasicInvader.c, ShieldedInvader, SlowInvader.
+- Interfact only defines the public interface for concrete classes that inherit from it.  Types abstraction in it's purest form.
+- You create `interface` just like `abstract` classes.
+- Interfaces don't have constructors or have implementations.  It only defines public.  And Visual Studios can auto-generate.
+- See IInvader.cs for the interface.  And see how its being used in the Invader.cs abstract class.
+
 
 

@@ -1,6 +1,6 @@
 ﻿namespace TreehouseDefense
 {
-    class Invader
+    abstract class Invader : IInvader //uses IInvader interface
     {
         private readonly Path _path;
         private int _pathStep = 0; //invaders keep their own path
@@ -20,7 +20,8 @@
          */
 
         //need to set to protected so that subclass can set.
-        public virtual int Health { get; protected set; } = 2; //set Health at 2 during constructor
+        //forces all subclass to provide implementation of health
+        public abstract int Health { get; protected set; } //set Health at 2 during constructor
 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
 

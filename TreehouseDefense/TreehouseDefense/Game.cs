@@ -60,11 +60,11 @@ namespace TreehouseDefense
                     new MapLocation(1,1,map)
                 }
             );
-            Invader[] invaders =
+            IInvader[] invaders =
             {
-            new Invader(path),
-            new Invader(path),
-            new Invader(path)
+            new BasicInvader(path),
+            new BasicInvader(path),
+            new BasicInvader(path)
             };
 
             Tower[] towers =
