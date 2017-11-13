@@ -1,6 +1,17 @@
 ﻿namespace TreehouseDefense
 {
-    interface IInvader
+    interface IMappable
+    {
+        MapLocation Location { get; }
+    }
+
+    interface IMoveable
+    {
+        void Move();
+    }
+
+    //inherits from IMoveable and IMappable
+    interface IInvader : IMappable , IMoveable
     {
         //from Invader.cs abstraction class
         //only defines public
@@ -13,8 +24,6 @@
         bool IsNeutralized { get; }
 
         bool IsActive { get; }
-
-        void Move();
 
         void DecreaseHealth(int factor);
     }

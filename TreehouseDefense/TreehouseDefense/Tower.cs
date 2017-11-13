@@ -10,7 +10,11 @@
 
         //initialized once and only once.
         //the members of a class can be declared using the storage class modifier static. These data members are shared by all instances of this class and are stored in one place.
-        private static readonly System.Random _random = new System.Random();
+        
+        //instead of this, now use from static class random.cs    
+        //private static readonly System.Random _random = new System.Random();
+        //also changed in IsSuccesfulShot();
+
 
         public Tower()
         {
@@ -24,7 +28,8 @@
 
         public bool IsSuccessfulShot()
         {
-            return Tower._random.NextDouble() < Accuracy; //random num from 0-1
+            //return Tower._random.NextDouble() < Accuracy; //random num from 0-1
+            return Random.NextDouble() < Accuracy;
         }
 
         //towers are made to shoot

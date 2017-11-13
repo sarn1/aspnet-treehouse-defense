@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="BasicInvader.cs" />
     <Compile Include="IInvader.cs" />
+    <Compile Include="Random.cs" />
+    <Compile Include="ResurrectingInvader.cs" />
     <Compile Include="SniperTower.cs" />
     <Compile Include="StrongInvader.cs" />
     <Compile Include="SlowInvader.cs" />

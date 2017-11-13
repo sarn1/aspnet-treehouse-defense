@@ -183,8 +183,12 @@ penguin.Move();
 - By putting abstract to a class definition, you no longer can create (instantiate) a concrete object of that class, but it onnly provides an abstract definition of what it means to be an invader.  See Invader.cs, BasicInvader.c, ShieldedInvader, SlowInvader.
 - Interfact only defines the public interface for concrete classes that inherit from it.  Types abstraction in it's purest form.
 - You create `interface` just like `abstract` classes.
-- Interfaces don't have constructors or have implementations.  It only defines public.  And Visual Studios can auto-generate.
+- Interfaces don't have constructors or have implementations.  It only defines public that subclasses must have.  And Visual Studios can auto-generate.
 - See IInvader.cs for the interface.  And see how its being used in the Invader.cs abstract class.
-
+- Abstract class contain code that should be shared by concrete subclasses.
+- C# doesn't allow multiple inheritance, but allows a class to inherit from multiple abstract classes.
+- **Most developers prefer to use composition and implement the interface instead of inheriting from a base class.  This gives us the most flebility to alter the class in the future and removes the depedency on the base class.**
+- Static class can't be inherited from any other class, nor can other class inherit from a static class.  You can't instantiate a static class.  System.Map is an example static map.
+- See example of static class in Random.cs and how its re-integrated into ShieldedInvader.cs and Tower.cs.  It's not calling a global static random generator class.
 
 
