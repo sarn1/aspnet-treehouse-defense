@@ -36,7 +36,7 @@
                     if(IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(Power);
-                        System.Console.WriteLine("Shot and hit invader");
+                        System.Console.WriteLine("Shot and hit invader at" + invader.Location);
 
                         if (invader.IsNeutralized)
                         {

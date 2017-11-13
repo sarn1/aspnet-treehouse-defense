@@ -178,3 +178,7 @@ penguin.Move();
 ```
 - Capitalized variables mean `protected`.
 - _ prefixed variables mean `private`.
+- All classes inherit from System.Object, then you override these using polymorphism.
+- Learn about `GetHashCode()` and `Finalize()`.
+
+
