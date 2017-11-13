@@ -1,5 +1,8 @@
 ﻿namespace TreehouseDefense
 {
+    //represents a coordinate on the map thus initialize with x and y
+    //gen purpose to represent a point in a grid
+    //maplocation is a sub class of this
     class Point
     {
         public readonly int X;
@@ -26,14 +29,7 @@
         //overloading
         public int DistanceTo(Point point)
         {
-            //cartesian formula
-            int xDiff = X - point.X;
-            int yDiff = Y - point.Y;
-
-            int xDiffSq = xDiff * xDiff;
-            int yDiffSq = yDiff * yDiff;
-
-            return (int)System.Math.Sqrt(xDiffSq + yDiffSq);
+            return DistanceTo(point.X, point.Y);
         }
     }
 }

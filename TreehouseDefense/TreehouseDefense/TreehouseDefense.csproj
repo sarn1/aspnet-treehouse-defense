@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SniperTower.cs" />
+    <Compile Include="StrongInvader.cs" />
+    <Compile Include="SlowInvader.cs" />
+    <Compile Include="FastInvader.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="ShieldedInvader.cs" />
     <Compile Include="Exceptions.cs" />

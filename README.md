@@ -148,3 +148,33 @@ public int StartAt { get; private set; } = 10;
 int i = 0;
 for (; i < invaders.Length; i++){}
 ```
+
+
+Intermediate C#
+https://teamtreehouse.com/library/intermediate-c
+
+- Inheritance methods are done with `virtual` and `override` keywords.  See Invader.cs and SheidlededInvader.cs.
+```csharp
+class Bird
+{
+	public virtual void Move()
+	{
+		System.Console.WriteLine("Birds fly");
+	}
+}
+
+class Penguin : Bird
+{
+	public override void Move()
+	{
+		System.Console.WriteLine("Penguins waddle");
+	}
+}
+
+Bird bird = new Bird();
+bird.Move();
+Penguin penguin = new Penguin();
+penguin.Move();
+```
+- Capitalized variables mean `protected`.
+- _ prefixed variables mean `private`.

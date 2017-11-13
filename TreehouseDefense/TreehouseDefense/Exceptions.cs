@@ -9,12 +9,14 @@
 
         }
 
+        //is a type of systemexception
         public TreehouseDefenseException(string msg) : base(msg)
         {
 
         }
     }
 
+    //is a type of treehousedefenseexception
     class OutOfBoundsException : TreehouseDefenseException
     {
         public OutOfBoundsException()

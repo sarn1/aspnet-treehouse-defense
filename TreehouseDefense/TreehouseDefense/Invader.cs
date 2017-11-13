@@ -3,7 +3,9 @@
     class Invader
     {
         private readonly Path _path;
-        private int _pathStep = 0;
+        private int _pathStep = 0; //invaders keep their own path
+
+        protected virtual int StepSize { get; } = 1 ;  //fastinvader overrides this with 2
 
         public MapLocation Location {
             get
@@ -17,7 +19,8 @@
          * public MapLocation Location => _path.GetLocationAt(_pathStep);
          */
 
-        public int Health { get; private set; } = 2; //set Health at 2 during constructor
+        //need to set to protected so that subclass can set.
+        public virtual int Health { get; protected set; } = 2; //set Health at 2 during constructor
 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
 
@@ -30,9 +33,10 @@
             _path = path;
         }
 
+        //invaders can move...
         public void Move()
         {
-            _pathStep += 1;
+            _pathStep += StepSize;
         }
 
         /*
@@ -40,7 +44,9 @@
          * public void Move => _pathStep += 1;
          */
 
-        public void DecreaseHealth(int factor)
+        //and invaders can lose health
+        //virtual allows it to be override in a subclass
+        public virtual void DecreaseHealth(int factor)
         {
             Health -= factor;
         }
