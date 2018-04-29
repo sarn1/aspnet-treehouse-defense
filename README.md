@@ -5,6 +5,8 @@ C# Objects
 
 https://teamtreehouse.com/library/c-objects
  
+![screenshot](https://github.com/sarn1/example-aspnet-treehouse-defense/blob/master/screenshot.png)
+ 
 - Convention is to name classes with upper case first letter, so you can name the object by their type (class).
  ```csharp
  Tower tower = new Tower();  
