@@ -193,4 +193,14 @@ penguin.Move();
 - Static class can't be inherited from any other class, nor can other class inherit from a static class.  You can't instantiate a static class.  System.Map is an example static map.
 - See example of static class in Random.cs and how its re-integrated into ShieldedInvader.cs and Tower.cs.  It's not calling a global static random generator class.
 
+## Notes Revisited
+```csharp
+// syntatic sugar for getter/setters
 
+protected override int StepSize { get; } = 2;
+
+public override int Health { get; protected set; } = 2;
+
+ public bool IsNeutralized => Health <= 0;
+```
+- The app runs off `Game.cs` since it has `void main`
